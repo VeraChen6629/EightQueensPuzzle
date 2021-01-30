@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightQueensPuzzle", "EightQueensPuzzle\EightQueensPuzzle.csproj", "{028A74A0-1102-4432-B92A-8A281D370891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightQueensPuzzle.Test", "EightQueensPuzzle.Test\EightQueensPuzzle.Test.csproj", "{B329EB51-5397-4DBF-943A-682188719BBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{028A74A0-1102-4432-B92A-8A281D370891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028A74A0-1102-4432-B92A-8A281D370891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028A74A0-1102-4432-B92A-8A281D370891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028A74A0-1102-4432-B92A-8A281D370891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B329EB51-5397-4DBF-943A-682188719BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B329EB51-5397-4DBF-943A-682188719BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B329EB51-5397-4DBF-943A-682188719BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B329EB51-5397-4DBF-943A-682188719BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0E25F3F-64D7-474B-95E1-F153A4A19A3F}
+	EndGlobalSection
+EndGlobal
