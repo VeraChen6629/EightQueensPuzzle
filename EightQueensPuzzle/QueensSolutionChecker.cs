@@ -80,7 +80,7 @@ namespace EightQueensPuzzle
                 }
             }
 
-           //If queen can not be place in any row in this column col then return false
+            //If queen can not be place in any row in this column col then return false
             return res;
         }
 
@@ -117,7 +117,7 @@ namespace EightQueensPuzzle
             Console.WriteLine("\n\n//Solution {0}", solutionNumber);
             //for (int i = 0; i < _queens; i++)
             for (int i = _queens-1; i >= 0; i--)
-                {
+            {
                 string[] row = new string[_queens];
                 for (int j = 0; j < _queens; j++)
                 {
