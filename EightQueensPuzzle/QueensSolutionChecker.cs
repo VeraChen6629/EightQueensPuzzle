@@ -7,10 +7,10 @@ namespace EightQueensPuzzle
 {
     public class QueensSolutionChecker
     {
-        private int _queens = 0;
+        private int _queens;
         private bool _isPrint = true;
-        private string[,] board;
-        private int _totalSolutions = 0;
+        private string[,] _board;
+        private int _totalSolutions;
         private const string QUEEN_STRING = "Q";
         private const string EMPTY_STRING = ".";
 
@@ -35,9 +35,9 @@ namespace EightQueensPuzzle
             _isPrint = isPrintSolutions;
             _totalSolutions = 0;
 
-            board = new string[_queens, _queens];
+            _board = new string[_queens, _queens];
 
-            if (SolveNQUtil(0) == false)
+            if (SolveQueensUtil(0) == false)
             {
                 Console.Write("Solution does not exist");
                 _totalSolutions = 0;
@@ -47,7 +47,7 @@ namespace EightQueensPuzzle
         }
 
         //A recursive utility function to solve N Queen problem
-        private bool SolveNQUtil(int col)
+        private bool SolveQueensUtil(int col)
         {
             //base case: If all queens are placed then return true
             if (col == _queens)
@@ -70,13 +70,13 @@ namespace EightQueensPuzzle
                 if (IsSafe(i, col))
                 {
                     //Place this queen in board[i,col]
-                    board[i, col] = QUEEN_STRING;
+                    _board[i, col] = QUEEN_STRING;
 
                     // Make result true if any placement is possible 
-                    res = SolveNQUtil(col + 1) || res;
+                    res = SolveQueensUtil(col + 1) || res;
 
                     //If placing queen in board[i,col] doesn't lead to a solution, then remove queen from board[i,col]
-                    board[i, col] = EMPTY_STRING; // BACKTRACK 
+                    _board[i, col] = EMPTY_STRING; // BACKTRACK 
                 }
             }
 
@@ -95,17 +95,17 @@ namespace EightQueensPuzzle
 
             //Check this row on left side
             for (i = 0; i < col; i++)
-                if (board[row, i] == QUEEN_STRING)
+                if (_board[row, i] == QUEEN_STRING)
                     return false;
 
             //Check upper diagonal on left side
             for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
-                if (board[i, j] == QUEEN_STRING)
+                if (_board[i, j] == QUEEN_STRING)
                     return false;
 
             //Check lower diagonal on left side
             for (i = row, j = col; j >= 0 && i < _queens; i++, j--)
-                if (board[i, j] == QUEEN_STRING)
+                if (_board[i, j] == QUEEN_STRING)
                     return false;
 
             return true;
@@ -121,7 +121,7 @@ namespace EightQueensPuzzle
                 string[] row = new string[_queens];
                 for (int j = 0; j < _queens; j++)
                 {
-                    row[j] = board[i, j]== QUEEN_STRING ? QUEEN_STRING : EMPTY_STRING;
+                    row[j] = _board[i, j]== QUEEN_STRING ? QUEEN_STRING : EMPTY_STRING;
                 }
                 Console.WriteLine(string.Join("", row));
             }
