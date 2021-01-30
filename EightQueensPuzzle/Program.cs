@@ -11,7 +11,7 @@ namespace EightQueensPuzzle
 
             DateTime dt_start = DateTime.Now;
 
-            //Get solution for n-queen puzzle
+            //Get solution for n-queen puzzle 
             QueensSolutionChecker qsChecker = new QueensSolutionChecker();
             int totalSolutions = qsChecker.GetQueensSolutions(queensNumber, isPrintSolutions);
 
